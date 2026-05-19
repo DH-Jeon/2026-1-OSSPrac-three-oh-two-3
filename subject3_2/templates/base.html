@@ -20,7 +20,9 @@
     <!-- AOS 애니메이션 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -62,7 +64,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('index') }}#project">Project</a>
+                    <a class="nav-link" href="{{ url_for('index') }}#origin">Why 302?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if active_page == 'members' %}active{% endif %}" href="{{ url_for('index') }}#team">Team</a>
@@ -96,6 +98,9 @@
                 </div>
             </div>
             <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <a href="https://github.com/CSID-DGU/2026-1-OSSPrac-three-oh-two-3" target="_blank" rel="noopener" class="footer-repo-link mb-2">
+                    <i class="bi bi-github"></i> CSID-DGU/2026-1-OSSPrac-three-oh-two-3
+                </a>
                 <p class="mb-0 small text-secondary">
                     © 2026 Team 302. Built with
                     <i class="bi bi-heart-fill text-danger mx-1"></i>

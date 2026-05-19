@@ -110,92 +110,6 @@
 </section>
 {% endif %}
 
-<!-- ============ PROJECT INTRO ============ -->
-<section id="project" class="section-space">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <span class="section-tag">About Project</span>
-            <h2 class="section-title">프로젝트 소개</h2>
-            <p class="section-desc">통계 · ML · 웹, 세 가지 강점이 만나는 곳</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="feature-card">
-                    <div class="feature-icon" style="--c:#0f766e;">
-                        <i class="bi bi-graph-up-arrow"></i>
-                    </div>
-                    <h4>Data Analytics</h4>
-                    <p>통계 분석과 시각화로 데이터 속 인사이트를 발견합니다. SPSS, R, Python 기반 분석 경험을 보유합니다.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="feature-card">
-                    <div class="feature-icon" style="--c:#ea580c;">
-                        <i class="bi bi-cpu"></i>
-                    </div>
-                    <h4>Machine Learning</h4>
-                    <p>Random Forest, GBM, XGBoost 등 다양한 모델로 의료, 공공, 교통 등 실전 문제를 해결합니다.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-card">
-                    <div class="feature-icon" style="--c:#e11d48;">
-                        <i class="bi bi-window-stack"></i>
-                    </div>
-                    <h4>Web Development</h4>
-                    <p>Flask, HTML/CSS, JavaScript 기반의 사용자 친화적인 웹 인터페이스를 구축합니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============ ARCHITECTURE ============ -->
-<section id="architecture" class="section-space pt-0">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <span class="section-tag">Tech Stack</span>
-            <h2 class="section-title">시스템 아키텍처</h2>
-            <p class="section-desc">오픈소스 기반의 안정적인 웹 서비스 구조</p>
-        </div>
-
-        <div class="arch-wrapper" data-aos="zoom-in">
-            <div class="arch-flow">
-                <div class="arch-node">
-                    <div class="node-icon"><i class="bi bi-person-circle"></i></div>
-                    <strong>User</strong>
-                    <span>Browser</span>
-                </div>
-                <div class="arch-arrow"><i class="bi bi-chevron-right"></i></div>
-                <div class="arch-node">
-                    <div class="node-icon"><i class="bi bi-window"></i></div>
-                    <strong>Frontend</strong>
-                    <span>HTML · CSS · JS</span>
-                </div>
-                <div class="arch-arrow"><i class="bi bi-chevron-right"></i></div>
-                <div class="arch-node">
-                    <div class="node-icon"><i class="bi bi-hdd-network"></i></div>
-                    <strong>Nginx</strong>
-                    <span>Reverse Proxy</span>
-                </div>
-                <div class="arch-arrow"><i class="bi bi-chevron-right"></i></div>
-                <div class="arch-node">
-                    <div class="node-icon"><i class="bi bi-gear-wide-connected"></i></div>
-                    <strong>Gunicorn</strong>
-                    <span>WSGI Server</span>
-                </div>
-                <div class="arch-arrow"><i class="bi bi-chevron-right"></i></div>
-                <div class="arch-node highlight">
-                    <div class="node-icon"><i class="bi bi-braces"></i></div>
-                    <strong>Flask</strong>
-                    <span>Python App</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ============ TEAM ============ -->
 <section id="team" class="section-space">
     <div class="container">
@@ -207,30 +121,40 @@
 
         <div class="row g-4">
             {% for m in members %}
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 120 }}">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 120 }}">
                 <a href="{{ url_for('member_detail', member_id=m.id) }}" class="member-link">
-                    <div class="member-card" style="--mc: {{ m.color }}; --mcd: {{ m.color_dark }};">
-                        <div class="member-banner">
+                    <div class="member-card member-card-row {% if m.id == 2 %}member-card-row-reverse{% endif %}" style="--mc: {{ m.color }}; --mcd: {{ m.color_dark }};">
+                        <div class="member-banner-side">
+                            <img src="{{ m.image }}" alt="{{ m.name }}" class="member-avatar">
                             <span class="member-tag">{{ m.tag }}</span>
                         </div>
                         <div class="member-body">
-                            <img src="{{ m.image }}" alt="{{ m.name }}" class="member-avatar">
-                            <h4 class="member-name">{{ m.name }}</h4>
-                            <p class="member-en">{{ m.english_name }}</p>
-                            <p class="member-role">{{ m.role }}</p>
-                            <p class="member-intro">{{ m.intro }}</p>
-
-                            <div class="member-skills-mini">
-                                {% for s in m.skills[:5] %}
-                                <img src="{{ s.logo }}" alt="{{ s.name }}" title="{{ s.name }}">
-                                {% endfor %}
-                                {% if m.skills|length > 5 %}
-                                <span class="more-skills">+{{ m.skills|length - 5 }}</span>
+                            <div class="member-head">
+                                <h4 class="member-name">{{ m.name }}</h4>
+                                <p class="member-en">{{ m.english_name }}</p>
+                                <p class="member-role">{{ m.role }}</p>
+                            </div>
+                            <div class="member-meta">
+                                <span class="meta-chip"><i class="bi bi-mortarboard-fill"></i> {{ m.education.major }}</span>
+                                <span class="meta-chip"><i class="bi bi-rocket-takeoff-fill"></i> Projects {{ m.projects|length }}</span>
+                                <span class="meta-chip"><i class="bi bi-cpu"></i> {{ m.skills|length }} Skills</span>
+                                {% if m.certificates %}
+                                <span class="meta-chip"><i class="bi bi-patch-check-fill"></i> {{ m.certificates|length }} Certs</span>
                                 {% endif %}
                             </div>
-
-                            <div class="member-cta">
-                                상세 프로필 보기 <i class="bi bi-arrow-right"></i>
+                            <p class="member-intro">{{ m.intro }}</p>
+                            <div class="member-foot">
+                                <div class="member-skills-mini">
+                                    {% for s in m.skills[:6] %}
+                                    <img src="{{ s.logo }}" alt="{{ s.name }}" title="{{ s.name }}">
+                                    {% endfor %}
+                                    {% if m.skills|length > 6 %}
+                                    <span class="more-skills">+{{ m.skills|length - 6 }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="member-cta">
+                                    상세 프로필 보기 <i class="bi bi-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
