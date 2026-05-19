@@ -9,40 +9,41 @@ TEAM_INFO = {
     "name": "Team 302",
     "tagline": "Data meets the Web",
     "description": (
-        "통계와 데이터 분석, 그리고 웹 개발이 만나는 곳. "
-        "Team 302는 서로 다른 강점을 가진 3인이 모여 "
-        "오픈소스 생태계에 기여하는 프로젝트 팀입니다."
+        "통계 분석, 머신러닝, 웹 개발 — 서로 다른 관심사를 가진 세 사람이 "
+        "오픈소스소프트웨어실습이라는 한 강의실로 리다이렉트되어 만났습니다. "
+        "같은 전공이든 다른 전공이든, 한 학기 동안 같은 페이지에서 어우러지는 팀입니다."
     ),
     "stats": [
         {"value": "3",  "label": "Members"},
-        {"value": "3",  "label": "Majors"},
+        {"value": "3",  "label": "Roles"},
         {"value": "8+", "label": "Projects"},
         {"value": "10+", "label": "Tech Stack"},
     ],
     "name_origin": {
         "code": "302",
         "status": "Found",
-        "headline": "302 Found — 우리가 만난 자리",
+        "headline": "302 Found — 서로 다른 길에서, 같은 강의실로",
         "summary": (
-            "팀명 \"302\"는 HTTP 상태 코드 302 Found(리다이렉트)에서 따왔습니다. "
-            "사용자의 요청을 더 적합한 자원으로 안내하듯, 통계 · 머신러닝 · 웹이라는 "
-            "서로 다른 길이 한 페이지에서 자연스럽게 연결되는 팀을 지향합니다."
+            "HTTP 302는 요청을 다른 자원으로 잠시 안내해주는 응답입니다. "
+            "데이터 분석, 머신러닝, 프론트엔드 — 서로 다른 관심사를 가진 세 사람이 "
+            "오픈소스소프트웨어실습이라는 한 강의실로 리다이렉트되어 만났습니다. "
+            "각자의 본래 길은 그대로 유지한 채, 한 학기 동안 같은 페이지에서 어우러지는 팀, 그게 Team 302입니다."
         ),
         "points": [
             {
-                "icon": "bi-arrow-left-right",
-                "title": "Redirect, Not Reject",
-                "desc": "막히면 거절하지 않고 더 나은 경로로 전환합니다. 데이터에서 모델로, 모델에서 사용자에게."
+                "icon": "bi-signpost-split",
+                "title": "서로 다른 관심사",
+                "desc": "통계 데이터의 인사이트, 머신러닝 모델링, 프론트엔드 웹 — 세 사람의 시선이 향한 방향은 각자 달랐습니다."
             },
             {
-                "icon": "bi-people-fill",
-                "title": "3명, 0갈등, 2배 성과",
-                "desc": "3 · 0 · 2 — 세 명이 모여 충돌 없이 시너지를 만들고자 하는 다짐을 코드에 새겼습니다."
+                "icon": "bi-arrow-right-circle",
+                "title": "같은 곳으로 리다이렉트",
+                "desc": "OSS 실습이라는 하나의 Location으로 안내되어, 한 학기 동안 같은 코드베이스 위에서 만났습니다."
             },
             {
-                "icon": "bi-link-45deg",
-                "title": "Found",
-                "desc": "각자가 가진 강점이 서로의 약점을 메우는 지점, 그곳이 바로 302가 가리키는 Location입니다."
+                "icon": "bi-geo-alt-fill",
+                "title": "서로의 Location",
+                "desc": "302 응답이 Location 헤더로 다음 목적지를 알려주듯, 우리는 서로에게 새로운 길을 안내합니다. 통계의 인사이트는 모델로, 모델의 결과는 사용자에게."
             }
         ]
     }
@@ -89,9 +90,9 @@ TEAM_MEMBERS = [
         "certificates": [],
         "contribution": "데이터 분석 및 통계 검증, 사용자 데이터 수집 설계, 가설 검정 기반 인사이트 도출",
         "contribution_percent": 33,
-        "github": None,
+        "github": "https://github.com/Jiho0221",
         "email": "wlgh02211@gmail.com",
-        "phone": None,
+        "phone": "010-7440-2310",
         "image": "https://i.pravatar.cc/400?img=33",
         "color": "#0f766e",
         "color_dark": "#134e4a"
@@ -154,7 +155,7 @@ TEAM_MEMBERS = [
         ],
         "contribution": "백엔드 ML 모델 설계 및 학습, 데이터 전처리 파이프라인 구축, API 연동 로직 구현",
         "contribution_percent": 34,
-        "github": None,
+        "github": "https://github.com/DH-Jeon",
         "email": "2022110488@naver.com",
         "phone": "010-6748-0213",
         "image": "https://i.pravatar.cc/400?img=12",
